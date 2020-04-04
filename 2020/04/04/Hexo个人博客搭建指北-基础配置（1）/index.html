@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MT&#39;s Blog</title>
+    <title>Hexo个人博客搭建指北 -- 基础配置（1） · MT&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >MT&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Hexo个人博客搭建指北 -- 基础配置（1）</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>MT's Blog.</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Hexo个人博客搭建指北 -- 基础配置（1）
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "hexo">hexo</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">484</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/04/04</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,39 +399,98 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/12/hello-world/" >
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><ol>
+<li>主要是记录自己利用hexo搭建github博客的 <del>采坑</del> 过程</li>
+<li>自己总会有一些奇奇怪怪的想法，想利用hexo实现试一哈：<ul>
+<li>markdown语法支持情况：比如说复选框、页面链接以及latex语法支持啥的</li>
+<li>markdown个人简历页面</li>
+</ul>
+</li>
+</ol>
+<h2 id="1-什么与为什么"><a href="#1-什么与为什么" class="headerlink" title="1. 什么与为什么"></a>1. 什么与为什么</h2><h3 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是hexo</h3><ul>
+<li>静态博客框架：解析Markdown文件 –&gt; 静态HTML页面  </li>
+</ul>
+<h3 id="为什么用hexo"><a href="#为什么用hexo" class="headerlink" title="为什么用hexo"></a>为什么用hexo</h3><ul>
+<li>没啥其他原因……百度了下如何搭建github.io主页，搜到了这个框架</li>
+<li>用markdown书写博文</li>
+</ul>
+<h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><p>参考：</p>
+<h2 id="文章布局（layout）"><a href="#文章布局（layout）" class="headerlink" title="文章布局（layout）"></a>文章布局（layout）</h2><p>TODO</p>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><ul>
+<li>参考：<a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">指令</a></li>
+</ul>
+<h3 id="本地调试相关指令"><a href="#本地调试相关指令" class="headerlink" title="本地调试相关指令"></a>本地调试相关指令</h3><ol>
+<li>启动server：<code>hexo server</code>或者<code>hexo s</code></li>
+<li>生成静态文件：<code>hexo generate</code>或者<code>hexo g</code><ul>
+<li>生成静态文件并监控文件变动：<code>hexo generate -w</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="博客文章写作相关指令"><a href="#博客文章写作相关指令" class="headerlink" title="博客文章写作相关指令"></a>博客文章写作相关指令</h3><ol>
+<li>生成markdown文件：<code>hexo new [layout] &lt;title&gt;</code><ol>
+<li>layout:<ul>
+<li>草稿文件：layout = draft</li>
+<li>博文文件：layout = post</li>
+</ul>
+</li>
+<li>title：文件名及生成的markdown文件默认的title字段</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post Hexo个人博客搭建指北 -- 基础配置（1）</span><br></pre></td></tr></table></figure>
 
-More info: Writing
-Run server1$ hexo server
+<ol>
+<li>将草稿markdown文件转为博文markdown文件：<code>hexo publish draft &lt;title&gt;</code>，例如：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; hexo publish draft Hexo个人博客搭建指北-基础配置（1）   </span><br><span class="line">INFO  Published: &lt;BLOG_PATH&gt;\<span class="built_in">source</span>\_posts\Hexo个人博客搭建指北-基础配置（1）.md</span><br></pre></td></tr></table></figure>
 
-Mo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+</li>
+</ol>
+<h2 id="采坑记录"><a href="#采坑记录" class="headerlink" title="采坑记录"></a>采坑记录</h2><ol>
+<li>不同标题间、有序或无须列表间注意留空行 –&gt; 否则会引发缩进问题</li>
+<li>利用<code>hexo publish</code>指令后，<code>_draft</code>文件中仍会保存原始草稿文件，且该文件不会自动同步到<code>_post</code>文件夹下 –&gt; 之后修改草稿文件，除非将修改后的草稿发表，对静态页面没有任何影响，但命令行中若运行指令<code>hexo generate -w</code>会一直显示有文件因保存而自动运行<code>hexo generate</code></li>
+<li>有序列表中无法嵌套无序列表 –&gt; 感觉是主题的事</li>
+</ol>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>Author：<a href="https://mtwz.github.io">MTwz</a>
+            <p>原文链接：<a href="https://mtwz.github.io/2020/04/04/Hexo个人博客搭建指北-基础配置（1）/">https://mtwz.github.io/2020/04/04/Hexo个人博客搭建指北-基础配置（1）/</a>
+            <p>发表日期：<a href="https://mtwz.github.io/2020/04/04/Hexo个人博客搭建指北-基础配置（1）/">April 4th 2020, 5:11:37 pm</a>
+            <p>更新日期：<a href="https://mtwz.github.io/2020/04/04/Hexo个人博客搭建指北-基础配置（1）/">April 4th 2020, 5:39:29 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/10/12/hello-world/" title= "Hello World">
+                    <div class="prevTitle">Hello World</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -448,6 +568,24 @@ Mo...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-前言"><span class="toc-number">1.</span> <span class="toc-text">0. 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么与为什么"><span class="toc-number">2.</span> <span class="toc-text">1. 什么与为什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是hexo"><span class="toc-number">2.1.</span> <span class="toc-text">什么是hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么用hexo"><span class="toc-number">2.2.</span> <span class="toc-text">为什么用hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件结构"><span class="toc-number">3.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章布局（layout）"><span class="toc-number">4.</span> <span class="toc-text">文章布局（layout）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用指令"><span class="toc-number">5.</span> <span class="toc-text">常用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地调试相关指令"><span class="toc-number">5.1.</span> <span class="toc-text">本地调试相关指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#博客文章写作相关指令"><span class="toc-number">5.2.</span> <span class="toc-text">博客文章写作相关指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#采坑记录"><span class="toc-number">6.</span> <span class="toc-text">采坑记录</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -584,6 +722,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
